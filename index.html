@@ -8,9 +8,45 @@
     <title>CVSE &quot;What's New&quot; Tab Sampler</title>
 
     <!-- Bootstrap -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<style>
+.my-url {font-size: 95%; color: #888; text-align:right;}
+</style>
+    
+    
+<script>
+// anon function (jQuery) to return a query string value for a specified key.
+// USAGE: val = $.QueryString["key"]                                     
+(function($) {  
+    $.QueryString = (function(a) {
+        if (a == "") return {};
+        var b = {};
+        for (var i = 0; i < a.length; ++i)
+        {
+            var p=a[i].split('=');
+            if (p.length != 2) continue;
+            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+        }
+        return b;
+    })(window.location.search.substr(1).split('&'))
+})(jQuery);
+
+// After document loads ...
+//    get tab id value from query string, default to "tab"
+//    format as an id, then fire the tab() function on that.
+//    allows users to be directed to an appropriate tab on the URL ...?tab=[identifier]
+$( document ).ready( function() {
+     var tabval =  $.QueryString["tab"] ||  "home" ; // get tab id value from query string, default to "tab"
+     tabval = "#" + tabval + "-tab";
+     $(tabval).tab('show');
+})
+</script>
+
 
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -28,7 +64,7 @@
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">What's New</a></li>
+    <li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" id="home-tab">What's New</a></li>
     <li role="presentation" class="dropdown">
     	<a href="#commercial" aria-controls="Commercial Transport" role="tab" data-toggle="dropdown">Commercial Transport <span class="caret" /></a>
     	<ul class="dropdown-menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
@@ -39,9 +75,9 @@
 		</ul>
 	</li>
 
-    <li role="presentation"><a href="#inspections" aria-controls="messages" role="tab" data-toggle="tab">Inspections & Standards</a></li>
+    <li role="presentation"><a href="#inspections" aria-controls="messages" role="tab" id="inspections-tab" data-toggle="tab">Inspections & Standards</a></li>
     <li role="presentation" class="dropdown">
-    	<a href="#settings" aria-controls="settings" role="tab" data-toggle="dropdown">
+    	<a href="#nsc" aria-controls="settings" role="tab" id="nsc-tab" data-toggle="dropdown">
     		National Safety Code <span class="caret" />
 		</a>
     	<ul class="dropdown-menu" aria-labelledby="myTabDrop2" id="myTabDrop2-contents">
@@ -54,6 +90,7 @@
   <!-- Tab panes -->
   <div class="tab-content">
   	<div role="tabpanel" class="tab-pane" id="t-forms">
+  	   <p class="my-url">?tab=t-forms</p>
   		<h3>T-Forms Panel</h3>
   		<p>T-Forms can be listed in a whatever table here</p>
   		<p>There are probably any number of downloads to make a table sortable.  <a href="https://github.com/drvic10k/bootstrap-sortable" target="_blank">This one</a> is just one of such. 
@@ -69,16 +106,19 @@
 		</div>
   	</div> 
   	<div role="tabpanel" class="tab-pane" id="notices">
+  	   <p class="my-url">?tab=notices</p>
   		<h3>Notices Panel</h3>
   		<p>Notices can be listed in a whatever table here</p>
   	</div> 
  
   	<div role="tabpanel" class="tab-pane" id="compliance">
+  	   <p class="my-url">?tab=compliance</p>
   		<h3>Compliance Circulars Panel</h3>
   		<p>Compliance Circulars can be listed in a whatever table here</p>
   	</div> 
  
   	<div role="tabpanel" class="tab-pane" id="circularsarchived">
+  	   <p class="my-url">?tab=circularsarchived</p>
   		<h3>Archived Circulars</h3>
   		<p>Archived Circulars can be listed in a whatever table here</p>
   	</div> 
@@ -87,16 +127,20 @@
   
   
   	<div role="tabpanel" class="tab-pane active" id="home">
+  	   <p class="my-url">?tab=home</p>
     	<h3>This is the Home Tab</h3
-    	<p>See the Javasript Tabs <a href="http://getbootstrap.com/javascript/#tabs"> documentation </a> 
+    	<p>See the Bootstrap Tabs <a href="http://getbootstrap.com/javascript/#tabs"> documentation </a> 
 	</div>
     <div role="tabpanel" class="tab-pane" id="profile">This is the profile tab</div>
     <div role="tabpanel" class="tab-pane" id="inspections">
+  	   <p class="my-url">?inspections</p>
       <h3>Inspections and Standards</h3>
       <p>Material for inspections and standards will appear here</p>
     </div>
-    <div role="tabpanel" class="tab-pane" id="dropdown1">This is dropdown1 target</div>
-    <div role="tabpanel" class="tab-pane" id="dropdown2">This is dropdown2 target</div>
+    <div role="tabpanel" class="tab-pane" id="dropdown1">  	   <p class="my-url">?tab=dropdown1</p>
+      This is dropdown1 target</div>
+    <div role="tabpanel" class="tab-pane" id="dropdown2">  	   <p class="my-url">?tab=dropdown2</p>
+      This is dropdown2 target</div>
   </div>
 
 </div>
@@ -107,8 +151,6 @@
     
     
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  </body>
