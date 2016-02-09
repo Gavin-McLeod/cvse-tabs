@@ -8,6 +8,8 @@
     <title>CVSE &quot;What's New&quot; Tab Sampler</title>
 
     <!-- Bootstrap -->
+<!-- using bootstrap CSS from CMS -->
+<link rel="stylesheet" href="http://www2.gov.bc.ca/StaticWebResources/static/shared/bootstrap-3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
@@ -48,6 +50,9 @@ $( document ).ready( function() {
 </script>
 
 
+<!-- using designated CSS from CMS -->
+<link rel="stylesheet" href="http://www2.gov.bc.ca/StaticWebResources/static/gov3/css/main.css">
+
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,10 +62,10 @@ $( document ).ready( function() {
     <![endif]-->
   </head>
   <body>
-  	<div style="max-width:1024px;min-width:600px;margin:auto;">
+<div id="#topicTemplate" class="template container">
+  	<!-- div style="max-width:1024px;min-width:600px;margin:auto;" -->
     <h1>CVSE &quot;What's New&quot; Tab Sampler</h1>
     <br>
-    <div>
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
@@ -93,7 +98,7 @@ $( document ).ready( function() {
   	   <p class="my-url">?tab=t-forms</p>
   		<h3>T-Forms Panel</h3>
   		<p>T-Forms can be listed in a whatever table here</p>
-  		<p>There are probably any number of downloads to make a table sortable.  <a href="https://github.com/drvic10k/bootstrap-sortable" target="_blank">This one</a> is just one of such. 
+  		<p>There are probably any number of downloads to make a table sortable.  <a href="https://github.com/drvic10k/bootstrap-sortable" target="_blank">This one</a> is just one of such.</p> 
   		<div class="table-responsive" style="border-top:1px solid #ccc;padding:16px;"> 
   			<table class="table" style="width:80%;"> 
   				<thead> <tr> <th>#</th> <th>Table heading</th> <th>Table heading</th> <th>Table heading</th> <th>Table heading</th> <th>Table heading</th> <th>Table heading</th> </tr> </thead> 
@@ -122,9 +127,6 @@ $( document ).ready( function() {
   		<h3>Archived Circulars</h3>
   		<p>Archived Circulars can be listed in a whatever table here</p>
   	</div> 
- 
-  
-  
   
   	<div role="tabpanel" class="tab-pane fade in active" id="home">
   	   <p class="my-url">?tab=home</p>
@@ -145,8 +147,7 @@ $( document ).ready( function() {
 
 </div>
 
-    
-    
+</div>    
     
     
     
@@ -155,3 +156,4 @@ $( document ).ready( function() {
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  </body>
 </html>
+
