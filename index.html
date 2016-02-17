@@ -21,17 +21,20 @@
 <!-- add in table sorting CSS -->
 <link rel="stylesheet" href="css/bootstrap-sortable.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Optional theme -- NOT USING THIS -->
+<!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" -->
 
+<!-- using designated CSS from CMS -->
+<link rel="stylesheet" href="http://www2.gov.bc.ca/StaticWebResources/static/gov3/css/main.css">
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
 <style>
 .my-url {font-size: 95%; color: #888; text-align:right;}
 #sorttable TH {text-align: left;}
 </style>
-    
-    
+
 <script>
 // anon function (jQuery) to return a query string value for a specified key.
 // USAGE: val = $.QueryString["key"]                                     
@@ -59,10 +62,6 @@ $( document ).ready( function() {
      $(tabval).tab('show');
 })
 </script>
-
-
-<!-- using designated CSS from CMS -->
-<link rel="stylesheet" href="http://www2.gov.bc.ca/StaticWebResources/static/gov3/css/main.css">
 
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -297,11 +296,12 @@ $( document ).ready( function() {
     	<ul>
     		<li>Primary content navigation should still be tabs</li>
     		<li>Secondary navigation can be anything reasonable but drop-down navigation is suggested</li>
-    		<li>The solution should realise 3 primary goals
+    		<li>The solution should realise 4 primary goals
     			<ul>
     				<li>clean up the navigation visually -- drop-downs may help, but may also remove user intuition by hiding navigation options</li>
-    				<li>material should be reachable through a URL</li>
+    				<li>individual tabs should be reachable through a URL</li>
     				<li>tables should allow the user to sort their data by column</li>
+    				<li>include CSS as used on the corporate CMS site</li>
 				</ul>
 			</li>
     	</ul>
@@ -310,8 +310,9 @@ $( document ).ready( function() {
     		<li>Bootstrap based</li>
     		<li>Tabbed primary navigation -- see the Bootstrap Tabs <a href="http://getbootstrap.com/javascript/#tabs"> documentation</a></li>
     		<li>menued secondary navigation</li>
-    		<li>all content accessible through the URL using a querystring</li>
+    		<li>all content accessible through the URL using a querystring, including pages otherwise accessibe through secondary nav</li>
     		<li>sortable tables - at least one acceptable solution, but there may be others.  See <a target="_blank" href="https://github.com/drvic10k/bootstrap-sortable">https://github.com/drvic10k/bootstrap-sortable</a></li>
+    		<li>CSS is included from corporate CMS - with mixed results</li>
     	</ul>
     	<p>Also:  This page uses the CSS file from the CMS, almost as documented.</p>
     	
