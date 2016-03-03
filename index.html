@@ -20,6 +20,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <!-- add in table sorting CSS -->
 <link rel="stylesheet" href="css/bootstrap-sortable.css">
+<link rel="stylesheet" href="css/modifyDefaults.css">
+
 
 <!-- Optional theme -- NOT USING THIS -->
 <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" -->
@@ -73,25 +75,25 @@ $( document ).ready( function() {
   </head>
   <body>
 
-<div id="header-main" class="navbar navbar-default navbar-fixed-top" style="border-bottom:2px solid #fcba19; margin-bottom:5px;">	
+<div id="header-main" class="navbar navbar-default navbar-fixed-top">	
 		
    <div style="display: block;" class="container">				
       <div id="header-main-row1" class="row">
-         <div class="col-sm-3 col-md-2 col-lg-2 header-main-left">
+         <div class="col-sm-3 col-md-2 col-lg-2 header-main-left">                  <!-- CUSTOM: page logo container, column widths are modified from the original default of lass="col-sm-2 col-md-2 col-lg-2 header-main-left" -->
             <div id="logo">
                <a href="http://gov.bc.ca/gov/content/home"><img src="http://www2.gov.bc.ca/assets/gov/home/gov3_bc_logo.png" alt="Government of B.C." title="Government of B.C."></a>
             </div>
          </div>
-         <div class="col-sm-4 col-md-5 col-lg-6">
-            <h1 style="color:white;margin-top:10px; font-size:3em">CVSE Tabs</h1>   <!-- PAGE CONTENT TITLE -->
+         <div class="col-sm-4 col-md-5 col-lg-6">   <!-- CUSTOM - this DIV is added -->
+            <h1 id="customizedTitle">CVSE Tabs</h1>   <!-- PAGE CONTENT TITLE -->
          </div>
       </div>
    </div>
 </div>
   
-<div id="#topicTemplate" class="template container">
+<div id="topicTemplate" class="template container">
   	<!-- div style="max-width:1024px;min-width:600px;margin:auto;" -->
-    <h1>CVSE &quot;What's New&quot; Tab Sampler</h1>
+    <h2>CVSE &quot;What's New&quot; Tab Sampler</h2>
     <br>
 
   <!-- Nav tabs -->
@@ -129,7 +131,7 @@ $( document ).ready( function() {
 
   		<div class="table-responsive" style="border-top:1px solid #ccc;padding:16px;"> 
   			<table class="table sortable table-striped table-hover" style="width:80%;" id="sorttable"> 
-  				<thead> <tr> <th>Category</th><th>T-Forms</th> <th>Description</th> <th>Posted<br>(YYYY/MM/DD)</th></thead> 
+  				<thead> <tr> <th>Category</th><th>T-Forms</th> <th>Description</th> <th>Posted<br>(YYYY/MM/DD)</th></tr></thead> 
   				<tbody> 
 			<tr>
                 <td><p>Commercial Transport</p></td>
@@ -278,7 +280,7 @@ $( document ).ready( function() {
   		
   		<div class="table-responsive" style="border-top:1px solid #ccc;padding:16px;"> 
   			<table class="table sortable table-striped table-hover" style="width:80%;" id="sorttable"> 
-  				<thead> <tr> <th>alpha</th><th>Number</th> <th>alpha again</th> <th>Names</th> <th>Dates</th></thead> 
+  				<thead> <tr> <th>alpha</th><th>Number</th> <th>alpha again</th> <th>Names</th> <th>Dates</th></tr></thead> 
   				<tbody> 
   						<tr> <td>D</td><td scope="row">1</td> <td>abc</td> <td>Gavin</td> <td>1962-02-24</td> </tr>
 						<tr> <td>Z</td><td scope="row">2</td> <td>bcd</td> <td>Wendy</td> <td>1972-12-13</td> </tr>
@@ -348,7 +350,7 @@ $( document ).ready( function() {
 
 </div>
 
-</div>    
+</body>
     
     
     
