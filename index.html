@@ -3,6 +3,9 @@
 	DEPENDANCIES:
 		JQuery
 		Bootstrap
+		corporate: 
+		   misc.js
+		   main.css
 		drvic10k/bootstrap-sortable (for sortable tables) source: https://github.com/drvic10k/bootstrap-sortable 
 --> 
 
@@ -30,11 +33,8 @@
 <link rel="stylesheet" href="http://www2.gov.bc.ca/StaticWebResources/static/gov3/css/main.css">
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script -->
-<script src="http://www2.gov.bc.ca/StaticWebResources/static/shared/scripts/jquery/jquery-1.11.1.min.js?refresh=160307103"></script>   <!-- corp: JQUERY -->
-<script src="http://www2.gov.bc.ca/StaticWebResources/static/gov3/js/misc.js?refresh=160307103"></script>         <!-- (corp: Misc - supports verious features -->
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
 <style>
 .my-url {font-size: 95%; color: #888; text-align:right;}
 #sorttable TH {text-align: left;}
@@ -129,10 +129,11 @@ $( document ).ready( function() {
   	<div role="tabpanel" class="tab-pane fade" id="t-forms">
   	   <p class="my-url">?tab=t-forms</p>
   		<h3>T-Forms Panel</h3>
-  		<p>T-Forms can be listed in a whatever table here</p>
-  		<p>There are probably any number of downloads/plug-ins to make a table sortable.  <a href="https://github.com/drvic10k/bootstrap-sortable" target="_blank">This one</a> is just one of such.</p> 
+  		
+  		<p class="bg-info">T-Forms can be listed in a whatever table here<br>
+  		There are probably any number of downloads/plug-ins to make a table sortable.  <a href="https://github.com/drvic10k/bootstrap-sortable" target="_blank">This one</a> is just one of such.</p> 
 
-  		<div class="table-responsive" style="border-top:1px solid #ccc;padding:16px;"> 
+  		<div class="table-responsive"> 
   			<table class="table sortable table-striped table-hover" style="width:80%;" id="sorttable"> 
   				<thead> <tr> <th>Category</th><th>T-Forms</th> <th>Description</th> <th>Posted<br>(YYYY/MM/DD)</th></tr></thead> 
   				<tbody> 
@@ -278,25 +279,136 @@ $( document ).ready( function() {
               </tbody> 
 			</table> 
 		</div>
-
-  		
-  		
-  		<div class="table-responsive" style="border-top:1px solid #ccc;padding:16px;"> 
-  			<table class="table sortable table-striped table-hover" style="width:80%;" id="sorttable"> 
-  				<thead> <tr> <th>alpha</th><th>Number</th> <th>alpha again</th> <th>Names</th> <th>Dates</th></tr></thead> 
-  				<tbody> 
-  						<tr> <td>D</td><td scope="row">1</td> <td>abc</td> <td>Gavin</td> <td>1962-02-24</td> </tr>
-						<tr> <td>Z</td><td scope="row">2</td> <td>bcd</td> <td>Wendy</td> <td>1972-12-13</td> </tr>
-						<tr> <td>A</td><td scope="row">3</td> <td>cde</td> <td>Peter</td> <td>1979-07-12</td> </tr>
-						<tr> <td>G</td><td scope="row">4</td> <td>def</td> <td>Gord</td>  <td>1955-01-09</td> </tr>
-				</tbody> 
-			</table> 
-		</div>
   	</div> 
   	<div role="tabpanel" class="tab-pane fade" id="notices">
   	   <p class="my-url">?tab=notices</p>
   		<h3>Notices Panel</h3>
-  		<p>Notices can be listed in a whatever table here</p>
+  		<p>Visit Commercial Transport for further information. </p>
+ 		<div class="table-responsive"> 
+  			<table class="table sortable table-striped table-hover" style="width:80%;" id="sorttable"> 
+  				<thead> <tr> <th>Notices</th><th>Description</th><th>Posted<br>(YYYY/MM/DD)</th></tr></thead> 
+            <tbody>
+               <tr>
+                  <td><p><a target="_blank" href="CTPM/Notices/CT_Notice_02-15_90Day_Notice_of_changes_to_CVSE_Forms_1002_and_1003.pdf">CT Notice 02-15</a></p></td>
+                  <td><p>90 Day Notice of changes to CVSE Forms 1002 and 1003</p></td>
+                  <td><p>2015/12/18</p></td>
+               </tr>
+               <tr>
+                  <td><p><a href="CTPM/Notices/CT_Notice_01-15_FMCSA_Medical_compliance-Class5drivers_operating_commercially_in_US.pdf" title="FMCSA Medical compliance - Class 5 drivers operating commercially in U.S." target="_blank">CT Notice 01-15</a></p></td>
+                  <td><p>FMCSA Medical compliance - Class 5 drivers operating commercially in U.S.</p></td>
+                  <td><p>2015/10/22</p></td>
+               </tr>
+               <tr>
+                  <td><p><a href="CTPM/Notices/CT_Notice_07-14_Authorization-B-Trains.pdf">CT Notice 07-14</a></p></td>
+                  <td><p>Letters of Authorization For Extended Length Super B-Trains Hauling Wood  Chips and Mill Processed Wood Residuals </p></td>
+                  <td><p>2014/11/07 </p></td>
+               </tr>
+               <tr>
+                  <td valign="top"><p><a href="CTPM/Notices/CT_Notice_05-14_Clarification_07-11_SteerAxle.pdf" target="_blank">CT Notice 05-14</a></p></td>
+                  <td><p>Clarification regarding Compliance Circular 07/11 Steer Axle Weight Limits (July 1, 2011)</p></td>
+                  <td><p>2014/06/19</p></td>
+               </tr>
+               <tr>
+                  <td valign="top"><p><a href="CTPM/Notices/CT_Notice_03-14_Cancellation_Reduction_Quad_Axle.pdf" target="_blank">CT Notice 03-14</a></p></td>
+                  <td><p>Cancellation of the planned Weight Reduction for Quad Axle Full Trailers.</p></td>
+                  <td><p>2014/03/30</p></td>
+               </tr>
+               <tr>
+                  <td><p><a target="_blank" href="CTPM/Notices/CT_Notice_10-13_Postponement.pdf">CT Notice 10-13</a></p></td>
+                  <td><p>Postponement of the Scheduled Trailer Weight Reductions </p></td>
+                  <td><p>2013/12/23</p></td>
+               </tr>
+               <tr>
+                  <td><p><a target="_blank" href="CTPM/Notices/CT_Notice_09-13_PacificGateway.pdf">CT Notice 09-13</a></p></td>
+                  <td><p>Pacific Gateway - OS-OW Vehicle Envelopes</p></td>
+                  <td><p>2013/10/18</p></td>
+               </tr>
+               <tr>
+                  <td><p><a href="CTPM/Notices/CT_Notice_07-13-2_DrawbarHitchOffset.pdf" target="_blank">CT Notice 07-13-Revised</a></p></td>
+                  <td><p>REVISED - Reminder of Drawbar and Hitch offset Requirements for Straight truck and Full Trailer combinations  - Appendices B and F of the Commercial Transport Regulation (CTR) </p></td>
+                  <td><p>2013/09/27</p></td>
+               </tr>
+               <tr>
+                  <td><p><a href="CTPM/Notices/CT_Notice_07-13_DrawbarHitchOffset.pdf" target="_blank">CT Notice 07-13</a></p></td>
+                  <td><p><a href="CTPM/Notices/CT_Notice_07-13_DrawbarHitchOffset.pdf" target="_blank"></a>Reminder of Drawbar and Hitch offset Requirements for Straight truck and Full Trailer combinations  - Appendices B and F of the Commercial Transport Regulation (CTR) </p></td>
+                  <td><p>2013/09/26</p></td>
+               </tr>
+               <tr>
+                  <td><p><a href="CTPM/Notices/CT_Notice_05-13_PilotVehicleTrafficControl.pdf" target="_blank">CT Notice 05-13 </a></p></td>
+                  <td><p>CVSE would like to thank everyone who took the time to contribute their input, in person or online, to the Mobile Traffic Control and Pilot Vehicle Review. We appreciate your assistance!</p></td>
+                  <td><p>2013/08/01</p></td>
+               </tr>
+               <tr class="table">
+                  <td><p><a href="CTPM/Notices/CT_Notice_10-12_LettersOfAuthorization_Beetle_Kill.pdf" target="_blank">CT Notice 10-12 </a></p></td>
+                  <td><p>Letters of Authorization for Beetle Killed Wood</p></td>
+                  <td><p>2012/12/20</p></td>
+               </tr>
+               <tr class="table">
+                  <td><p><a href="CTPM/Notices/CT_Notice_09-12_PostponeTrailerWeight.pdf" target="_blank">CT Notice 09-12 </a></p></td>
+                  <td><p>AMENDMENT - Postponement of the Scheduled Trailer Weight Reductions </p></td>
+                  <td><p>2012/12/11</p></td>
+               </tr>
+               <tr class="table">
+                  <td><p><a href="CTPM/Notices/CT_Notice_08-12_PostponeTrailerWeight.pdf" target="_blank">CT Notice 08-12 </a></p></td>
+                  <td><p>Postponement of the Scheduled Trailer Weight Reductions </p></td>
+                  <td><p>2012/12/07</p></td>
+               </tr>
+               <tr class="table">
+                  <td><p><a href="CTPM/Notices/CT_Notice_05-12.pdf" target="_blank">CT Notice 05-12 </a></p></td>
+                  <td><p>A new user-friendly information website for the trucking industry is now available. </p></td>
+                  <td><p>2012/06/14</p></td>
+               </tr>
+               <tr class="table">
+                  <td><p><a href="CTPM/Notices/CT_Notice_02-12_Amendment_Beetle_Kill.pdf" target="_blank">CT Notice 02-12 </a></p></td>
+                  <td><p><strong>Amendment </strong>to Letters of Authorization for Short Logs, Long Logs and
+                    Wide Bunk Beetle Killed Wood.</p></td>
+               <td><p>2012/06/11</p></td>
+               </tr>
+                  <tr class="table">
+                  <td><p><a href="CTPM/Notices/CT_Notice_04-12_trailer_weight.pdf" target="_blank">CT Notice 04-12</a></p></td>
+                  <td><p>NOTICE:  Amendment Notice of Postponement of Scheduled Trailer Weight Reductions</p></td>
+               <td><p>2012/05/24</p></td>
+               </tr>
+                  <tr class="table">
+                  <td><p><a href="CTPM/Notices/CT_Notice_06-11_Postponement_Weight_Reduction.pdf" target="_blank">CT Notice 06-11</a></p></td>
+                  <td><p>NOTICE:  Postponement of Scheduled Trailer Weight Reductions</p>
+               <p>&nbsp;</p></td>
+               <td><p>2011/12/06</p></td>
+                  </tr>
+                  <tr class="table">
+                  <td><p><a href="CTPM/Notices/CT_Notice_20111027_PMH_Right_Lane_Only.pdf" target="_blank">CT Notice 
+                 20111027</a></p></td>
+               <td><p>NOTICE: Commercial Vehicle Right Lane Only Use in PMH1 Project Corridor</p>
+                  <p>&nbsp;</p></td>
+                  <td><p>2011/10/27</p></td>
+               </tr>
+               <tr class="table">
+                  <td><p><a href="CTPM/Notices/CT_Notice_05-11_extension_over_weight_permit.pdf" target="_blank">CT Notice 05-11</a></p></td>
+                  <td><p>NOTICE:  Speeding Up Over Weight Permit Approvals Requiring Bridge Review.</p>
+                  <p> Effective July 2011, the 30 day approval time limit issued by Bridge Engineering Branch was increased to 90 days.  This change is anticipated to reduce the number of requests for time extensions by 90 percent, improving efficiencies for industry and government. </p></td>
+                  <td><p>2011/10/13</p></td>
+               </tr>
+               <tr class="table">
+                  <td><p><a href="CTPM/Notices/CT_Notice_04-11_Tips_Overweight_Permit.pdf" target="_blank">CT Notice 04-11</a></p></td>
+                  <td><p>NOTICE: Tips for speeding up over weight permit approvals requiring bridge   review.</p>
+                  <p>UPDATED REFERENCE: <em><a href="http://www.cvse.ca/CTPM/Chapter_6.pdf">Commercial Transport Procedure   Manual Chapter 6 Heavy Haul and extraordinary Loads - Section 6.4.3.Ciii</a>. </em><br>
+                 <br>
+                 See form <a href="http://www.th.gov.bc.ca/forms/getForm.aspx?formId=1262" target="_blank">CVSE1049</a>.</p></td>
+                  <td><p>2011/09/22</p></td>
+               </tr>
+               <tr class="table">
+               <td><p><a href="CTPM/Notices/CT_Notice_02-11.pdf" target="_blank">CT Notice 02-11</a></p></td>
+                  <td><p>Intent to defer the enactment of the scheduled trailer weight reductions.</p></td>
+                  <td><p>2011/08/04</p></td>
+               </tr>
+            </tbody>
+
+         </table> 
+		</div>
+  	</div> 
+ 
+
+
   	</div> 
  
   	<div role="tabpanel" class="tab-pane fade" id="compliance">
@@ -367,31 +479,31 @@ $( document ).ready( function() {
 				<div id="footerAdminLinks" class="row">
 					<ul class="inline">
 						<li id="replicantData_64BB7AFB6346453E96CF3F8EFE745151" data-order="0">
-								<a href="http://www.cvse.ca/" target="_self">CVSE Home</a>
+								<a href="/gov/content/home" target="_self">Home</a>
 
 </li>														
 						<li id="replicantData_E65457FFB5BF4A589E1291B94B989557" data-order="1">
-								<a href="http://www2.gov.bc.ca/gov/content/about-gov-bc-ca" target="_self">About CVSE</a>
+								<a href="/gov/content/about-gov-bc-ca" target="_self">About gov.bc.ca</a>
 
 </li>														
 						<li id="replicantData_2E18DFD9524A4C95A9601ABF261EC70E" data-order="2">
-								<a href="http://www2.gov.bc.ca/gov/content/home/disclaimer" target="_self">Disclaimer</a>
+								<a href="/gov/content/home/disclaimer" target="_self">Disclaimer</a>
 
 </li>														
 						<li id="replicantData_F960821F16BB43799D89D309EB9C1318" data-order="3">
-								<a href="http://www2.gov.bc.ca/gov/content/home/privacy" target="_self">Privacy</a>
+								<a href="/gov/content/home/privacy" target="_self">Privacy</a>
 
 </li>														
 						<li id="replicantData_0123F79F761A47EDB9B7DE8FE4EB591A" data-order="4">
-								<a href="http://www2.gov.bc.ca/gov/content/home/accessibility" target="_self">Accessibility</a>
+								<a href="/gov/content/home/accessibility" target="_self">Accessibility</a>
 
 </li>														
 						<li id="replicantData_68A5C36D97E445EDB9C87F10D9C3472F" data-order="5">
-								<a href="http://www2.gov.bc.ca/gov/content/home/copyright" target="_self">Copyright</a>
+								<a href="/gov/content/home/copyright" target="_self">Copyright</a>
 
 </li>														
 						<li id="replicantData_5C329F040B414B62A8802DFC7072C39E" data-order="6">
-								<a href="http://www.cvse.ca/contacts.htm" target="_self">Contact CVSE</a>
+								<a href="/gov/content/home/contact-us" target="_self">Contact Us</a>
 
 </li>														
 						<!-- viewport toggle - set view port cookie and reload current page 
@@ -415,10 +527,8 @@ $( document ).ready( function() {
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!-- Latest compiled and minified JavaScript -->
-<!-- script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script -->  
-<script src="http://www2.gov.bc.ca//StaticWebResources/static/shared/bootstrap-3.2.0/js/bootstrap.min.js?refresh=160307103"></script> <!-- corp: BOOTSTRAP -->
-
-<script src="js/bootstrap-sortable.js"></script>  <!-- local - sortable tables -->  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  
+<script src="js/bootstrap-sortable.js"></script>  
 
 </body>
 </html>
