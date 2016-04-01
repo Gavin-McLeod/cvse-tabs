@@ -57,14 +57,22 @@
 })(jQuery);
 
 // After document loads ...
-//    get tab id value from query string, default to "tab"
-//    format as an id, then fire the tab() function on that.
-//    allows users to be directed to an appropriate tab on the URL ...?tab=[identifier]
 $( document ).ready( function() {
-     var tabval =  $.QueryString["tab"] ||  "home" ; // get tab id value from query string, default to "tab"
+ //    get tab id value from query string, default to "tab"
+ //    format as an id, then fire the tab() function on that.
+ //    allows users to be directed to an appropriate tab on the URL ...?tab=[identifier]
+    var tabval =  $.QueryString["tab"] ||  "home" ; // get tab id value from query string, default to "tab"
      tabval = "#" + tabval + "-tab";
      $(tabval).tab('show');
-})
+
+ //    add the functionality to support the "Back-To-Top" feature
+   $(".back-to-top").on("focus mousedown", function(e) {
+                 e.preventDefault();
+     $('html,body').animate({ scrollTop: 0 }, 'slow');
+   });
+});
+
+
 </script>
 
 
@@ -77,7 +85,7 @@ $( document ).ready( function() {
   </head>
   <body>
 
-<div id="header-main" class="navbar navbar-default navbar-fixed-top">	
+<div id="header-main" class="navbar">	<!--  navbar-default navbar-fixed-top -->
 		
    <div style="display: block;" class="container">				
       <div id="header-main-row1" class="row">
@@ -93,7 +101,7 @@ $( document ).ready( function() {
    </div>
 
 
-   <div class="navigationRibbon hidden-xs">		
+   <div class="navigationRibbon">		
       <div class="level2Navigation">
          <div class="container">
             <a href="">About Us</a>
@@ -538,7 +546,7 @@ $( document ).ready( function() {
 <!-- Latest compiled and minified JavaScript -->
 <script src="http://www2.gov.bc.ca/StaticWebResources/static/shared/bootstrap-3.2.0/js/bootstrap.min.js"></script>  
 <script src="js/bootstrap-sortable.js"></script>  
-<script src="http://www2.gov.bc.ca/StaticWebResources/static/gov3/js/misc.js"></script>
+<!-- script src="http://www2.gov.bc.ca/StaticWebResources/static/gov3/js/misc.js"></script -->
 
 </body>
 </html>
