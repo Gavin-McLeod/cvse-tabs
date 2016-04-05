@@ -131,24 +131,24 @@ $( document ).ready( function() {
     <li role="presentation" class="dropdown">
     	<a href="#commercial" aria-controls="Commercial Transport" role="tab" data-toggle="dropdown">Commercial Transport <span class="caret" /></a>
     	<ul class="dropdown-menu" aria-labelledby="commercialTabDrop1" id="myTabDrop1-contents">
-    		<li class=""><a href="#t-forms" role="tab" id="t-forms-tab" data-toggle="tab" aria-controls="t-forms" aria-expanded="true">T-Forms</a></li> 
-    		<li class=""><a href="#notices" role="tab" id="notices-tab" data-toggle="tab" aria-controls="notices" aria-expanded="false">Notices</a></li>
-    		<li class=""><a href="#compliance" role="tab" id="compliance-tab" data-toggle="tab" aria-controls="compliance" aria-expanded="false">Compliance Circulars</a></li>
+    		<li class=""><a href="#t-forms"           role="tab" id="t-forms-tab"           data-toggle="tab" aria-controls="t-forms"            aria-expanded="true">T-Forms</a></li> 
+    		<li class=""><a href="#notices"           role="tab" id="notices-tab"           data-toggle="tab" aria-controls="notices"            aria-expanded="false">Notices</a></li>
+    		<li class=""><a href="#compliance"        role="tab" id="compliance-tab"        data-toggle="tab" aria-controls="compliance"         aria-expanded="false">Compliance Circulars</a></li>
     		<li class=""><a href="#circularsarchived" role="tab" id="circularsarchived-tab" data-toggle="tab" aria-controls="circulars archived" aria-expanded="false">Circulars - Archived</a></li>
 		</ul>
 	</li>
 
-    <li role="presentation">
-      <a href="#inspections" aria-controls="inpsections" role="tab" data-toggle="dropdown">Inspections &amp; Standards <span class="caret" /></a>
-    	<ul class="dropdown-menu" aria-labelledby="inspectionsTabDrop1" id="inspectionsTabDrop1-contents">
-    		<li class=""><a href="#insp-bulletins" role="tab" id="insp-bulletins-tab" data-toggle="tab" aria-controls="Inspection Bulletins" aria-expanded="true">Bulletins</a></li> 
-    		<li class=""><a href="#insp-circulars" role="tab" id="insp-circulars-tab" data-toggle="tab" aria-controls="circulars"            aria-expanded="false">Circulars</a></li>
-    		<li class=""><a href="#insp-notices"   role="tab" id="insp-notices-tab"   data-toggle="tab" aria-controls="notices"              aria-expanded="false">Notices</a></li>
-    		<li class=""><a href="#insp-safety"    role="tab" id="insp-safety-tab"    data-toggle="tab" aria-controls="safety"               aria-expanded="false">Inspection &amp; Safety Information</a></li>
-    		<li class=""><a href="#insp-forms"     role="tab" id="insp-forms-tab"     data-toggle="tab" aria-controls="forms"                aria-expanded="false">Forms</a></li>
-    		<li class=""><a href="#insp-archived"  role="tab" id="insp-archived-tab"  data-toggle="tab" aria-controls="archived circulars"   aria-expanded="false">Archived</a></li>
+    <li role="presentation" class="dropdown">
+    	<a href="#commercial" aria-controls="Commercial Transport" role="tab" data-toggle="dropdown">Inspections and Standards<span class="caret" /></a>
+    	<ul class="dropdown-menu" aria-labelledby="commercialTabDrop1" id="myTabDrop1-contents">
+    		<li class=""><a href="#insp-bulletins" role="tab" id="insp-bulletins-tab" data-toggle="tab" aria-controls="inspection bulletins" aria-expanded="true">Bulletins</a></li> 
+    		<li class=""><a href="#insp-circulars" role="tab" id="insp-circulars-tab" data-toggle="tab" aria-controls="inspection circulars" aria-expanded="false">Circulars</a></li>
+    		<li class=""><a href="#insp-notices"   role="tab" id="insp-notices-tab"   data-toggle="tab" aria-controls="inspection notices"   aria-expanded="false">Inspection Notices</a></li>
+    		<li class=""><a href="#insp-safety"    role="tab" id="insp-safety-tab"    data-toggle="tab" aria-controls="inspection safety"    aria-expanded="false">Inspection and Safety Information</a></li>
+    		<li class=""><a href="#insp-forms"     role="tab" id="insp-forms-tab"     data-toggle="tab" aria-controls="inspection forms"     aria-expanded="false">Forms</a></li>
+    		<li class=""><a href="#insp-archived"  role="tab" id="insp-archived-tab"  data-toggle="tab" aria-controls="inspection archived"  aria-expanded="false">Archived</a></li>
 		</ul>
-    </li>
+	</li>
 
 
 
@@ -557,6 +557,7 @@ $( document ).ready( function() {
                 <p><img src="extraordinary/hwy97_hwy24-100mile.png" width="455" height="360" alt="Highway 97"></p></td>
               <td><p>2012/12/18</p></td>
             </tr>
+            </tbody>
         </table>
   		</div>
    </div> <!-- END What's New -->
@@ -1084,7 +1085,7 @@ $( document ).ready( function() {
   			</table>
       </div>
   	</div>  <!-- END Compliance --> 
- 
+
 
 
 
@@ -1563,14 +1564,14 @@ $( document ).ready( function() {
               </tr></tbody>
   			</table>
       </div>
-   </div> 
+   </div>
 
   	<div role="tabpanel" class="tab-pane fade" id="insp-bulletins">
   	   <p class="my-url">?tab=insp-bulletins</p>
   		<h3>Bulletins</h3>
    </div>
   	<div role="tabpanel" class="tab-pane fade" id="insp-circulars">
-  	   <p class="my-url">?tab=insp-bulletins</p>
+  	   <p class="my-url">?tab=insp-circulars</p>
   		<h3>Circulars</h3>
    </div>
   	<div role="tabpanel" class="tab-pane fade" id="insp-notices">
@@ -1589,6 +1590,13 @@ $( document ).ready( function() {
   	   <p class="my-url">?tab=insp-archived</p>
   		<h3>Archived</h3>
    </div>
+
+   <!-- National Safety Code tabs Content -->
+    <div role="tabpanel" class="tab-pane fade" id="dropdown1">  	   <p class="my-url">?tab=dropdown1</p>
+      This is dropdown1 target</div>
+    <div role="tabpanel" class="tab-pane fade" id="dropdown2">  	   <p class="my-url">?tab=dropdown2</p>
+      This is dropdown2 target</div>
+
    
   	<div role="tabpanel" class="tab-pane fade" id="about">
   	   <p class="my-url">?tab=about</p>
@@ -1624,10 +1632,6 @@ $( document ).ready( function() {
       <h3>Inspections and Standards</h3>
       <p>Material for inspections and standards will appear here</p>
     </div -->
-    <div role="tabpanel" class="tab-pane fade" id="dropdown1">  	   <p class="my-url">?tab=dropdown1</p>
-      This is dropdown1 target</div>
-    <div role="tabpanel" class="tab-pane fade" id="dropdown2">  	   <p class="my-url">?tab=dropdown2</p>
-      This is dropdown2 target</div>
   </div>
 
 </div>
