@@ -22,7 +22,7 @@ function myHTMLInclude() {
           myHTMLInclude();
         }
       }      
-      xhttp.open("GET", file, true);
+      xhttp.open("GET", file, false); // forced synchronous loading.  To reset to  asynchronous use xhttp.open("GET", file, true);  GCM
       xhttp.send();
       return;
     }

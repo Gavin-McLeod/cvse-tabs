@@ -7,6 +7,8 @@
 		   misc.js
 		   main.css
 		drvic10k/bootstrap-sortable (for sortable tables) source: https://github.com/drvic10k/bootstrap-sortable 
+		w3-include-HTML.js          (for AJAX file loads) source: http://www.w3schools.com/howto/howto_html_include.asp 
+
 --> 
 
 <html lang="en">
@@ -20,9 +22,11 @@
     <!-- Bootstrap -->
 <!-- using bootstrap CSS from CMS -->
 <link rel="stylesheet" href="http://www2.gov.bc.ca/StaticWebResources/static/shared/bootstrap-3.2.0/css/bootstrap.min.css">
-<!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" -->
+
 <!-- add in table sorting CSS -->
 <link rel="stylesheet" href="css/bootstrap-sortable.css">
+
+<!-- modifyDefaults.css contains any deviations in style from corporate -->  
 <link rel="stylesheet" href="css/modifyDefaults.css">
 
 
@@ -150,100 +154,125 @@ $( document ).ready( function() {
 		</ul>
 	</li>
 
-
-
-
-    <li role="presentation" class="dropdown">
+	<li role="presentation" class="dropdown">
     	<a href="#nsc" aria-controls="settings" role="tab" id="nsc-tab" data-toggle="dropdown">
     		National Safety Code <span class="caret" />
 		</a>
-    	<ul class="dropdown-menu" aria-labelledby="myTabDrop2" id="myTabDrop2-contents">
-    		<li class=""><a href="#dropdown1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="false">Dropdown 1</a></li> 
-    		<li class=""><a href="#dropdown2" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2" aria-expanded="false">Dropdown 2</a></li>
+    	<ul class="dropdown-menu" aria-labelledby="National Safety Code" id="nsc-contents">
+    		<li class=""><a href="#nsc-notices" role="tab" id="nsc-notices-tab" data-toggle="tab" aria-controls="NSC Notices" aria-expanded="false">Notices, Circulars &amp; Bulletins</a></li> 
+    		<li class=""><a href="#nsc-forms" role="tab" id="nsc-forms-tab" data-toggle="tab" aria-controls="NSC Forms" aria-expanded="false">Forms</a></li>
 		</ul>
     </li>
+
+    <li role="presentation"><a href="#compliance-notices" aria-controls="Compliance, Education &amp; Policy" role="tab" data-toggle="tab" id="compliance-notices-tab">Compliance, Education &amp; Policy</a></li>
+
     <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab" id="about-tab">About</a></li>
   </ul>
 
+  
   <!-- Tab panes -->
   <div class="tab-content">
-   <div role="tabpanel" class="tab-pane fade" id="t-forms">
-  	   <p class="my-url">?tab=t-forms</p>
-  		<h3>T-Forms Panel</h3>
-  		<div class="table-responsive"  w3-include-HTML="include/ct-tforms.html"> 
-		</div>
-  	</div> <!-- END T-Forms --> 
 
-
-   	<div role="tabpanel" class="tab-pane fade in active" id="whatsnew">
+   <div role="tabpanel" class="tab-pane fade in active" id="whatsnew">
   	   <p class="my-url">?tab=whatsnew</p>
   		<h3>What's New</h3>
   		<div class="table-responsive"  w3-include-HTML="include/whatsnew.html"> 
   		</div>
    </div> <!-- END What's New -->
 
+   <div role="tabpanel" class="tab-pane fade" id="t-forms">
+  	   <p class="my-url">?tab=t-forms</p>
+  		<h3>T-Forms Panel</h3>
+  		<div class="table-responsive"  w3-include-HTML="include/ct-tforms.html"> 
+		</div>
+  	</div> <!-- END T-Forms --> 
   
   	
   	<div role="tabpanel" class="tab-pane fade" id="notices">
   	   <p class="my-url">?tab=notices</p>
   		<h3>Notices Panel</h3>
   		<p>Visit Commercial Transport for further information. </p>
- 		<!-- div class="table-responsive" w3-include-HTML="include/ct-notices.html"> 
-		</div -->
+ 		<div class="table-responsive" w3-include-HTML="include/ct-notices.html"> 
+		</div>
   	</div> <!-- END Notices -->
  
   	<div role="tabpanel" class="tab-pane fade" id="compliance">
   	   <p class="my-url">?tab=compliance</p>
   		<h3>Compliance Circulars Panel</h3>
-  		<!--div class="table-responsive" w3-include-HTML="include/ct-compliance.html"> 
-      </div -->
+  		<div class="table-responsive" w3-include-HTML="include/ct-compliance.html"> 
+      </div>
   	</div>  <!-- END Compliance --> 
 
   	<div role="tabpanel" class="tab-pane fade" id="circularsarchived">
   	   <p class="my-url">?tab=circularsarchived</p>
   		<h3>Archived Circulars</h3>
-  		<!-- div class="table-responsive" w3-include-HTML="include/ct-archived.html"> 
-      </div -->
+  		<div class="table-responsive" w3-include-HTML="include/ct-archived.html"> 
+      </div>
    </div>
 
   	<div role="tabpanel" class="tab-pane fade" id="insp-bulletins">
   	   <p class="my-url">?tab=insp-bulletins</p>
   		<h3>Inspection Bulletins</h3>
-  		<!-- div class="table-responsive" w3-include-HTML="include/insp-bulletins.html"> 
-      </div-->
+  		<div class="table-responsive" w3-include-HTML="include/insp-bulletins.html"> 
+      </div>
    </div>
+
   	<div role="tabpanel" class="tab-pane fade" id="insp-circulars">
   	   <p class="my-url">?tab=insp-circulars</p>
   		<h3>Circulars</h3>
-  		<!-- div class="table-responsive" w3-include-HTML="include/insp-circulars.html"> 
-      </div -->
+  		<div class="table-responsive" w3-include-HTML="include/insp-circulars.html"> 
+      </div>
    </div>
+
   	<div role="tabpanel" class="tab-pane fade" id="insp-notices">
   	   <p class="my-url">?tab=insp-notices</p>
   		<h3>Notices</h3>
-  		<!-- div class="table-responsive" w3-include-HTML="include/insp-notices.html"> 
-      </div -->
+  		<div class="table-responsive" w3-include-HTML="include/insp-notices.html"> 
+      </div>
    </div>
+
   	<div role="tabpanel" class="tab-pane fade" id="insp-safety">
   	   <p class="my-url">?tab=insp-safety</p>
-  		<h3>Safety</h3>
-  		<!-- div class="table-responsive" w3-include-HTML="include/insp-safety.html"> 
-      </div -->
+  		<h3>Inspection and Safety Information</h3>
+  		<div class="table-responsive" w3-include-HTML="include/insp-safety.html"> 
+      </div>
    </div>
+
   	<div role="tabpanel" class="tab-pane fade" id="insp-forms">
   	   <p class="my-url">?tab=insp-forms</p>
   		<h3>Forms</h3>
+  		<div class="table-responsive" w3-include-HTML="include/insp-forms.html"> 
+      </div>
    </div>
+
   	<div role="tabpanel" class="tab-pane fade" id="insp-archived">
   	   <p class="my-url">?tab=insp-archived</p>
   		<h3>Archived</h3>
+  		<div class="table-responsive" w3-include-HTML="include/insp-archived.html"> 
+      </div>
    </div>
 
    <!-- National Safety Code tabs Content -->
-    <div role="tabpanel" class="tab-pane fade" id="dropdown1">  	   <p class="my-url">?tab=dropdown1</p>
-      This is dropdown1 target</div>
-    <div role="tabpanel" class="tab-pane fade" id="dropdown2">  	   <p class="my-url">?tab=dropdown2</p>
-      This is dropdown2 target</div>
+    <div role="tabpanel" class="tab-pane fade" id="nsc-notices">  	   
+      <p class="my-url">?tab=nsc-notices</p>
+  		<h3>Notices, Circulars &amp; Bulletins</h3>
+  		<div class="table-responsive" w3-include-HTML="include/nsc-notices.html"> 
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade" id="nsc-forms">  	   
+      <p class="my-url">?tab=nsc-forms</p>
+      <h3>Forms</h3>
+  		<div class="table-responsive" w3-include-HTML="include/nsc-forms.html"> 
+      </div>
+   </div>
+
+   <div role="tabpanel" class="tab-pane fade" id="compliance-notices">  	   
+      <p class="my-url">?tab=compliance-notices</p>
+      <h3>Compliance, Education &amp; Policy</h3>
+  		<div class="table-responsive" w3-include-HTML="include/compliance-notices.html"> 
+      </div>
+   </div>
 
    
   	<div role="tabpanel" class="tab-pane fade" id="about">
@@ -341,7 +370,7 @@ $( document ).ready( function() {
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!-- Latest compiled and minified JavaScript -->
 <script src="http://www2.gov.bc.ca/StaticWebResources/static/shared/bootstrap-3.2.0/js/bootstrap.min.js"></script>  
-<script src="js/w3-include-HTML.js"></script>
+<script src="js/w3-include-HTML.js"></script>     <!-- http://www.w3schools.com/howto/howto_html_include.asp -->
 <script src="js/bootstrap-sortable.js"></script>  
 <!-- script src="http://www2.gov.bc.ca/StaticWebResources/static/gov3/js/misc.js"></script -->
 
