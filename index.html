@@ -74,6 +74,13 @@ $( document ).ready( function() {
                  e.preventDefault();
      $('html,body').animate({ scrollTop: 0 }, 'slow');
    });
+
+//    build permalink path for tabs
+   var host = window.location.href;  
+   sliceat = host.indexOf("?");
+   host = host.slice(0,sliceat); 
+   $(".my-url").prepend( host );
+
 });
 
 
