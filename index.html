@@ -78,7 +78,7 @@ $( document ).ready( function() {
 //    build permalink path for tabs
    var host = window.location.href;  
    sliceat = host.indexOf("?");
-   host = host.slice(0,sliceat); 
+   if (sliceat > -1) { host = host.slice(0,sliceat); } 
    $(".my-url").prepend( host );
 
 });
